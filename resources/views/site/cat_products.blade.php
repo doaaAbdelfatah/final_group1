@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid">
 <div class="row">
-    @foreach (App\Models\Product::all() as $product)
+    @foreach ($category->products as $product)
   
     <div class="col-md-4">
       <div id="carouselExampleControls{{$product->id}}" class="carousel slide" data-ride="carousel">

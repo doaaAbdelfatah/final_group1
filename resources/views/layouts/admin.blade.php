@@ -32,8 +32,54 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="navbar-nav mr-auto">                        
+                          <li class="nav-item">
+                            <a class="nav-link" href="/brand">@lang('messages.Brand')</a>
+                          </li>  
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              @lang('messages.Users')
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/users/create">@lang('messages.Add New User')</a>
+                              
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="/users">@lang('messages.Users')</a>
+                            </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              {{__("messages.Categories")}} 
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/category/create">@lang('messages.Add New Category')</a>
+                              
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="/category">@lang('messages.Show All Categories')</a>
+                            </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              @lang('data.Products')
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/product/create">@lang('messages.Add New Product')</a>
+                              
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="/product">@lang('messages.Show All Products') </a>
+                            </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              @lang('messages.Suppliers')
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/supplier/create">@lang('messages.Add New Supplier')</a>
+                              
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="/supplier">@lang('messages.Show All Suppliers')</a>
+                            </div>
+                          </li>                          
                     </ul>
 
                     <!-- Right Side Of Navbar -->

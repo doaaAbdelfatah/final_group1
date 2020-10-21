@@ -60,6 +60,7 @@ Route::resource("/supplier" ,SupplierController::class)->middleware(['auth', 'au
 Route::resource("/contact_types" ,ContactController::class)->middleware(['auth', 'auth.admin']); 
 Route::prefix("/users")->middleware(['auth', 'auth.admin'])->group(function(){
     Route::get("/" ,[UserController::class , "index"])->name("user.index");
+    Route::post("/" ,[UserController::class , "store"])->name("user.store");
     Route::get("/create" ,[UserController::class , "create"])->name("user.create");
 });
 

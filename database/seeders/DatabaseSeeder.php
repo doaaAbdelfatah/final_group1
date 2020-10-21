@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             "role" =>"super admin"
         ]);
         // $this->call(BrandSeeder::class);
-        $this->call(ContactTypeSeeder::class);
+        // $this->call(ContactTypeSeeder::class);
         // User::factory(10)->create();
         // Brand::factory(10)->create();
         // Category::factory(3)->create();

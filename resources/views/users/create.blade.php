@@ -22,14 +22,7 @@
                     <small  class="text-danger">{{$message}}</small>
                 @enderror
                 </div>
-                <div class="form-group mt-4">
-                  <label for="">Password</label>
-                <input type="password" name="password" class="form-control"  placeholder="Password">
-                {{-- <small id="name_msg" class="text-danger"></small>  --}}
-                @error('password')
-                    <small  class="text-danger">{{$message}}</small>
-                @enderror
-                </div>
+      
                 <div class="form-group mt-4">
                     <label for="">Role</label>
                     <select name="role" class="form-control">

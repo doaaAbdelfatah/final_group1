@@ -15,7 +15,19 @@
             <img src="{{asset('storage/'.$image->img)}}" class="d-block w-100" alt="{{$product->name}}">
           </div>         
           @endforeach
-  
+          <div class="carousel-caption d-none d-md-block">
+            @if (session()->has("bag")  )
+              @isset(session()->get("bag")[$product->id])
+                <a class="btn btn-sm btn-secondary" href="/bag/remove/{{$product->id}}" role="button">Remove From Bag</a>             
+              @endisset
+              @empty(session()->get("bag")[$product->id])
+              <a class="btn btn-sm btn-danger" href="/bag/add/{{$product->id}}" role="button">Add To Bag</a>            
+
+              @endisset
+            @else 
+            <a class="btn btn-sm btn-danger" href="/bag/add/{{$product->id}}" role="button">Add To Bag</a>
+            @endif
+          </div>
   
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls{{$product->id}}" role="button" data-slide="prev">

@@ -64,6 +64,19 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{{ route('bag') }}">bag</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="badge badge-pill badge-danger">
+                            @if (session()->has("bag"))
+                                {{count(session()->get("bag"))}}
+                            @else
+                                0
+                            @endif
+                        </span>
+                    </li>
+
                     @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

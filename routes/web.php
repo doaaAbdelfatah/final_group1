@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\BagController;
 use App\Http\Middleware\AdminAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrandControler;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductImageController;
 use App\Http\Controllers\SupplierController;
@@ -78,3 +80,10 @@ Route::view("/error" ,"error")->name("error");
 Route::prefix("/user")->group(function(){
     Route::get("/category/{category}" , [CategoryController::class ,"userCats"]);
 });
+
+Route::view("/bag" ,"bag")->name("bag");
+Route::get("/bag/add/{product}" ,[BagController::class ,"add"])->name("bag.add");
+Route::get("/bag/remove/{product}" ,[BagController::class ,"remove"])->name("bag.remove");
+
+
+Route::get("/order/create" ,[OrderController::class ,"create"])->name("order.create");

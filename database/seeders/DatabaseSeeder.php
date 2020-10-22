@@ -20,16 +20,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            "name" => "Super Admin",
-            "email" =>"sadmin@yat.com",
-            "password" => Hash::make("123456789"),
-            "role" =>"super admin"
-        ]);
+        // User::create([
+        //     "name" => "Super Admin",
+        //     "email" =>"sadmin@yat.com",
+        //     "password" => Hash::make("123456789"),
+        //     "role" =>"super admin"
+        // ]);
         // $this->call(BrandSeeder::class);
         // $this->call(ContactTypeSeeder::class);
         // User::factory(10)->create();
-        // Brand::factory(10)->create();
+        Brand::factory(100)->create();
         // Category::factory(3)->create();
         // Category::factory(10)->create();
         // Product::factory(300)->create();
